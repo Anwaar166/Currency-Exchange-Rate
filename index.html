@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curreny Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <form action="">
+            <div class="forPrinting">
+                <p>Enter Amount</p>
+                <input type="number" id="inputText" placeholder="Enter Number...">
+                <div class="SearchBoxPlace">
+                    <input list="message" type="text" id="search" placeholder="Search Country...">
+                    <input list="message" type="text" id="search2" placeholder="Search Country...">
+                </div>
+                <div class="fromTOBox">
+                    <div class="fromBox">
+                        <div class="flagImages"></div>
+                        <select name="from" id="fromPlacehodler">
+                        </select>
+
+                    </div>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    <div class="toBox">
+                        <div class="toflagImages" class="dropdowns"></div>
+                        <select name="to" id="toPlacehodler">
+                        </select>
+                    </div>
+                </div>
+                <div class="message">
+                    <p class="message1">Exchange Rate Values</p>
+                </div>
+            </div>
+            <button id="btn">Get Exchange Rate</button>
+            <button id="btn2">Print</button>
+
+
+
+
+
+        </form>
+    </div>
+    <script src="code.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

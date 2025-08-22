@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; 
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.container {
+  width: min(90%, 400px); /* max 400px but shrink on small screens */
+  height: auto; /* flexible */
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: none;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+form,
+button,
+input,
+.message {
+  width: 100%;
+  border: none;
+  margin-bottom: 1.5rem;
+  outline: none;
+}
+
+input {
+  border: 1px solid lightgray;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.fromTOBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fromBox,
+.toBox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  flex: 1;
+}
+
+select {
+  border: none;
+  outline: none;
+  font-size: 0.7rem;
+  margin: .24rem;
+  background: transparent;
+  width: 100%;
+}
+img {
+  width: 20px;
+  height: 20px;
+ 
+}
+
+button {
+  background-color: #28a745;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+.SearchBoxPlace {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 1rem;           
+width: 100%;  
+height: 60px; 
+
+}
+
+#search, #search2 {
+  flex: 1;                         
+  max-width: 45%;   
+  height: 2rem;        
+  padding: 0.6rem 1rem;             
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: .75rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+#inputText{
+  transition: all 0.3s ease;
+}
+#inputText:focus, #search:focus, #search2:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76,175,80,0.3);
+}
+
+@media print{
+   body * {
+    visibility: hidden;   /* hides everything but keeps structure */
+  }
+
+  .forPrinting, .forPrinting * {
+    visibility: visible;
+  /* only this becomes visible */
+  }
+}
