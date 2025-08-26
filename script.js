@@ -11,7 +11,7 @@ let search2=document.querySelector("#search2")
 //for flags
 
 async function fromflagChanges(countryName) {
-  let flagURL = await Promise.resolve(`https://flagsapi.com/${countryName}/flat/64.png`);
+  let flagURL =`https://flagsapi.com/${countryName}/flat/64.png`;
   let countryFlag = `<img class="images" src="${flagURL}" alt="${countryName} flag">`;
   document.querySelector(".flagImages").innerHTML = countryFlag;
 
@@ -56,8 +56,8 @@ search1.addEventListener("input", (event) => {
 // from country flag
 
 select.addEventListener("change", (e) => {
-  if (e.target.value !== "") {
-    fromflagChanges(e.target.value);
+  if (e.value !== "") {
+    fromflagChanges(e.value);
   }
 });
 
@@ -65,7 +65,7 @@ select.addEventListener("change", (e) => {
 
 
 async function toflagChanges(countryName) {
-  let flagURL = await Promise.resolve(`https://flagsapi.com/${countryName}/flat/64.png`);
+  let flagURL =`https://flagsapi.com/${countryName}/flat/64.png`;
   let countryFlag = `<img src="${flagURL}" alt="${countryName} flag">`;
   document.querySelector(".toflagImages").innerHTML = countryFlag;
   return countryFlag;
@@ -106,8 +106,8 @@ search2.addEventListener("input",()=>{
  renderOption2(search2.value)
 })
 select2.addEventListener("change", (e) => {
-  if (e.target.value !== "") {
-    toflagChanges(e.target.value);
+  if (e.value !== "") {
+    toflagChanges(e.value);
   }
 });
 
@@ -147,6 +147,7 @@ button2.addEventListener("click",(event)=>{
   event.preventDefault()
   window.print()
 })
+
 
 
 
