@@ -56,8 +56,8 @@ search1.addEventListener("input", (event) => {
 // from country flag
 
 select.addEventListener("change", (e) => {
-  if (e.value !== "") {
-    fromflagChanges(e.value);
+  if (e.target.value !== "") {
+    fromflagChanges(e.target.value);
   }
 });
 
@@ -106,8 +106,8 @@ search2.addEventListener("input",()=>{
  renderOption2(search2.value)
 })
 select2.addEventListener("change", (e) => {
-  if (e.value !== "") {
-    toflagChanges(e.value);
+  if (e.target.value !== "") {
+    toflagChanges(e.target.value);
   }
 });
 
@@ -147,6 +147,7 @@ button2.addEventListener("click",(event)=>{
   event.preventDefault()
   window.print()
 })
+
 
 
 
